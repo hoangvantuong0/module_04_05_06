@@ -13,6 +13,10 @@
   <div th:if="${success}">
     <span th:text="${success}"></span>
   </div>
+  <form th:action="@{/product/search}" method="POST" novalidate="novalidate" >
+    <input type="text" name="productName" width="10px"> <input type="submit" value="Search">
+
+  </form>
 </div>
 <table id = "customers">
   <thead>

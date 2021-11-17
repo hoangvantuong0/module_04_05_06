@@ -14,4 +14,5 @@ public interface IProductService {
     void update(int id, Product product);
 
     void remove(int id);
+    public List<Product> searchName(String name);
 }
