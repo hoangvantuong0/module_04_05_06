@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>List book</title>
+</head>
+<body>
+<a href="/create-book">Create new book</a>
+<a href="/borrow-list">List borrow book</a>
+<th:block th:if="${message}">
+  <p th:text="${message}"></p>
+</th:block>
+<h1>Blog</h1>
+<form>
+  <label>Search by name</label>
+  <input type="text" name="name">
+  <input type="submit" value="Search">
+</form>
+<!--<form>-->
+<!--    <label>Filter by categorise</label>-->
+<!--    <select onchange="this.form.submit()" th:name="categoriseId" , th:value="${categoriseId}">-->
+<!--        <option value="" disabled selected>Choose</option>-->
+<!--        <th:block th:each="temp: ${categoriseList}">-->
+<!--            <option th:value="${temp.id}" th:text="${temp.name}">Choose</option>-->
+<!--        </th:block>-->
+<!--    </select>-->
+<!--</form>-->
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Nam</th>
+    <th>Author</th>
+    <th>Quantity</th>
+    <th>Borrow</th>
+    <th>Return</th>
+    <th>Delete</th>
+  </tr>
+  <th:block th:each="book : ${bookList}">
+    <tr>
+      <td th:text="${book.id}"></td>
+      <td th:text="${book.name}"></td>
+      <td th:text="${book.author}"></td>
+      <td th:text="${book.number}"></td>
+      <td><a th:href="@{/borrow-book/__${book.id}__ }">Borrow</a></td>
+      <td><a th:href="@{/return-book/__${book.id}__ }">Return</a></td>
+      <td><a th:href="@{/delete-book/__${book.id}__ }">Delete</a></td>
+    </tr>
+  </th:block>
+</table>
+
+</body>
+</html>
