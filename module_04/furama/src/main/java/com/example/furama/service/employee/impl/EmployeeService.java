@@ -14,6 +14,7 @@ import java.util.Optional;
 public class EmployeeService implements IEmployeeService {
     @Autowired
     IEmployeeRepository employeeRepository;
+
     @Override
     public Iterable<Employee> findAll() {
         return employeeRepository.findAll();
@@ -26,12 +27,12 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void save(Employee employee) {
-employeeRepository.save(employee);
+        employeeRepository.save(employee);
     }
 
     @Override
     public void remove(Integer id) {
-employeeRepository.deleteById(id);
+        employeeRepository.deleteById(id);
     }
 
     @Override

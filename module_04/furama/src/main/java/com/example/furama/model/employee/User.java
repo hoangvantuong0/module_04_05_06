@@ -9,24 +9,32 @@ import java.util.List;
 @Entity
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String name;
     private String password;
     @OneToMany(targetEntity = Employee.class, mappedBy = "user")
-    private List<Employee> employeeList;
+    private List< Employee > employeeList;
     // Khử đệ quy (có nhiều cách)
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_name"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private List<Role> roleList;
+    @ManyToMany(mappedBy = "userList", fetch = FetchType.EAGER)
+    private List< Role > roleList;
+
 
     public User() {
     }
 
-    public User(String name, String password, List<Employee> employeeList, List<Role> roleList) {
+    public User(Integer id, String name, String password) {
+        this.id = id;
         this.name = name;
         this.password = password;
-        this.employeeList = employeeList;
-        this.roleList = roleList;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {

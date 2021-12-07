@@ -9,16 +9,18 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    @ManyToMany(mappedBy = "roleList")
-    List<User> userList;
+    @ManyToMany()
+    @JoinTable(name = "user_role",
+            joinColumns = @JoinColumn(name = "role_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id"))
+    List< User > userList;
 
     public Role() {
     }
 
-    public Role(Integer id, String name, List<User> userList) {
+    public Role(Integer id, String name) {
         this.id = id;
         this.name = name;
-        this.userList = userList;
     }
 
     public Integer getId() {

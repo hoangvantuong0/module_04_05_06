@@ -3,21 +3,38 @@ package com.example.furama.model.customer;
 import com.example.furama.model.contract.Contract;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.List;
 
 @Table
 @Entity
 public class Customer {
     @Id
+    @Pattern(regexp = "KH-[0-9]{4}", message = "Wrong format! Please input again!")
     private String id;
     @ManyToOne(targetEntity = CustomerType.class)
+    @NotNull(message = "Please choose one")
     private CustomerType customerType;
+    @Column(name = "name", columnDefinition = "VARCHAR(45)")
+    @NotBlank(message = "Wrong format! Please capitalize the first letter")
     private String name;
+    @Column(name = "birthday", columnDefinition = "VARCHAR(45)")
+    @NotEmpty(message = "Birthday should not empty!")
     private String birthday;
+    @Column(name = "gender", columnDefinition = "VARCHAR(15)")
+    @NotNull(message = "Please select a gender")
     private Boolean gender;
+    @Column(name = "idCard", columnDefinition = "VARCHAR(15)")
+    @Pattern(regexp = "[0-9]{9}|[09]{12}", message = "Wrong format! please input like the pattern!")
     private String idCard;
+    @Column(name = "phone", columnDefinition = "VARCHAR(15)")
+    @Pattern(regexp = "^(09|\\(84\\)+9)[01]\\d{7}$", message = "Wrong format! please input like the pattern!")
     private String phone;
+    @Column(name = "email", columnDefinition = "VARCHAR(100)")
+    @Pattern(regexp = "^[a-zA-Z0-9]+@[a-z]+.[a-z]+$", message = "Wrong format! please input like the pattern!")
     private String email;
+    @Column(name = "address", columnDefinition = "VARCHAR(100)")
+    @NotBlank(message = "Please input address name")
     private String address;
 
     @OneToMany(targetEntity = Contract.class, mappedBy = "customer")
