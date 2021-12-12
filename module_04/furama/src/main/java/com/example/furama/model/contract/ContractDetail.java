@@ -10,6 +10,7 @@ public class ContractDetail {
     private Integer id;
     @ManyToOne(targetEntity = Contract.class)
     private Contract contract;
+
     @ManyToOne(targetEntity = AttachService.class)
     private AttachService attachService;
 

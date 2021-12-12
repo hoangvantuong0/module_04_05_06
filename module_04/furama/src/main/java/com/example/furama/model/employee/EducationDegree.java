@@ -9,16 +9,15 @@ public class EducationDegree {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    @OneToMany(targetEntity = Employee.class, mappedBy = "educationDegree")
+    @OneToMany(mappedBy = "educationDegree")
     private List<Employee> employeeList;
 
     public EducationDegree() {
     }
 
-    public EducationDegree(Integer id, String name, List<Employee> employeeList) {
+    public EducationDegree(Integer id, String name) {
         this.id = id;
         this.name = name;
-        this.employeeList = employeeList;
     }
 
     public Integer getId() {

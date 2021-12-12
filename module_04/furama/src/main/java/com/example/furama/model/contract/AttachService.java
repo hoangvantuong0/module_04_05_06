@@ -12,20 +12,19 @@ public class AttachService {
     private Double cost;
     private Integer unit;
     private String status;
-    @OneToMany(targetEntity = ContractDetail.class, mappedBy = "attachService")
+    @OneToMany(mappedBy = "attachService")
     List<ContractDetail> contractDetailList;
 
     public AttachService() {
     }
 
-    public AttachService(Integer id, String name, Double cost, Integer unit, String status,
-                         List<ContractDetail> contractDetailList) {
+    public AttachService(Integer id, String name, Double cost,
+                         Integer unit, String status) {
         this.id = id;
         this.name = name;
         this.cost = cost;
         this.unit = unit;
         this.status = status;
-        this.contractDetailList = contractDetailList;
     }
 
     public Integer getId() {

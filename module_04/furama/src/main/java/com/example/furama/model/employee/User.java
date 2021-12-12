@@ -13,7 +13,7 @@ public class User {
     private Integer id;
     private String name;
     private String password;
-    @OneToMany(targetEntity = Employee.class, mappedBy = "user")
+    @OneToMany(mappedBy = "user")
     private List< Employee > employeeList;
     // Khử đệ quy (có nhiều cách)
     @ManyToMany(mappedBy = "userList", fetch = FetchType.EAGER)

@@ -1,0 +1,35 @@
+package com.example.furama.service.services.impl;
+
+import com.example.furama.model.services.ServiceType;
+import com.example.furama.repository.services.IServiceTypeRepository;
+import com.example.furama.service.services.IServiceTypeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
+@Service
+public class ServiceTypeService implements IServiceTypeService {
+    @Autowired
+    IServiceTypeRepository serviceTypeRepository;
+
+    @Override
+    public Iterable<ServiceType> findAll() {
+        return serviceTypeRepository.findAll();
+    }
+
+    @Override
+    public Optional<ServiceType> findById(Integer id) {
+        return serviceTypeRepository.findById(id);
+    }
+
+    @Override
+    public void save(ServiceType serviceType) {
+        serviceTypeRepository.save(serviceType);
+    }
+
+    @Override
+    public void remove(Integer id) {
+        serviceTypeRepository.deleteById(id);
+    }
+}

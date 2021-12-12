@@ -3,6 +3,10 @@ package com.example.furama.model.employee;
 import com.example.furama.model.contract.Contract;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Entity
@@ -11,22 +15,45 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(name = "name", columnDefinition = "VARCHAR(45)")
+    @NotBlank(message = "Wrong format! Please capitalize the first letter")
     private String name;
+    @Column(name = "birthday", columnDefinition = "VARCHAR(45)")
+    @NotEmpty(message = "Birthday should not empty!")
     private String birthday;
+    @Column(name = "idCard", columnDefinition = "VARCHAR(15)", unique=true)
+    @Pattern(regexp = "[0-9]{9}|[0-9]{12}", message = "Wrong format! please input like the pattern!")
+    @NotBlank(message = "please input!")
     private String idCard;
+    @NotNull(message = "input salary!")
+    @Column(columnDefinition = "salary")
     private Double salary;
+    @NotBlank(message = "input please")
+    @Column(columnDefinition = "VARCHAR(45)",unique=true)
+    @Pattern(regexp = "090\\d{7}||091\\d{7}||[(]84[)][+]90\\d{7}||[(]84[)][+]91\\d{7}",
+            message = "Wrong format! please input like the pattern!")
     private String phone;
+    @NotBlank(message = "input please!")
+    @Column(columnDefinition = "VARCHAR(45)",unique=true)
+    @Pattern(regexp = "[^\\s@]+@[^\\s@]+\\.[^\\s@]+",message = "Wrong format! please input like the pattern!")
     private String email;
+    @Column(name = "address", columnDefinition = "VARCHAR(100)")
+    @NotBlank(message = "Please input address name")
     private String address;
+
+
     @ManyToOne(targetEntity = Position.class)
     private Position position;
+
     @ManyToOne(targetEntity = EducationDegree.class)
     private EducationDegree educationDegree;
+
     @ManyToOne(targetEntity = Division.class)
     private Division division;
     @ManyToOne(targetEntity = User.class)
     private User user;
-    @OneToMany(targetEntity = Contract.class, mappedBy = "employee")
+
+    @OneToMany(mappedBy = "employee")
     List<Contract> contractList;
 
     public Employee() {
@@ -34,7 +61,7 @@ public class Employee {
 
     public Employee(Integer id, String name, String birthday, String idCard, Double salary, String phone,
                     String email, String address, Position position, EducationDegree educationDegree,
-                    Division division, User user, List<Contract> contractList) {
+                    Division division, User user) {
         this.id = id;
         this.name = name;
         this.birthday = birthday;
@@ -47,7 +74,6 @@ public class Employee {
         this.educationDegree = educationDegree;
         this.division = division;
         this.user = user;
-        this.contractList = contractList;
     }
 
     public Integer getId() {

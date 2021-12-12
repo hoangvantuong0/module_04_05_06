@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+<form th:action="@{/show/delete}"  th:object="${showTime}" th:method="POST">
+    <h3>Are you sure about delete this?</h3>
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table class="table">
+        <tr>
+            <td>Id:</td>
+            <td th:text="${showTime.id}"></td>
+        </tr>
+        <tr>
+            <td>Date:</td>
+            <td th:text="${showTime.date}"></td>
+        </tr>
+        <tr>
+            <td>Quantity:</td>
+            <td th:text="${showTime.quantity}"></td>
+        </tr>
+        <tr>
+            <td>Film:</td>
+            <td th:text="${showTime.film.name}"></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<!--<script>-->
+<!--    $(document).ready(function () {-->
+<!--        console.log("helo")-->
+<!--        $(".clickDeleteCustomer").click(function () {-->
+<!--            console.log($(this).next().val());-->
+<!--            $.ajax({-->
+<!--                type: "POST",-->
+<!--                url: "/show/delete/" + $(this).next().val(),-->
+<!--                data: "HTML",-->
+<!--                success: function (data) {-->
+<!--                    let message = "Deleted successfully";-->
+<!--                    setTimeout(function () {-->
+<!--                        $("#modalId").modal("hide");-->
+<!--                    }, 2000);-->
+<!--                    $(".modal-body").html(message);-->
+<!--                }-->
+<!--            })-->
+<!--        })-->
+<!--    });-->
+<!--</script>-->
+</body>
+</html>

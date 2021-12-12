@@ -20,18 +20,21 @@ public class Contract {
 
     @ManyToOne(targetEntity = Employee.class)
     private Employee employee;
+
     @ManyToOne(targetEntity = Customer.class)
     private Customer customer;
+
     @ManyToOne(targetEntity = Services.class)
     private Services services;
-    @OneToMany(targetEntity = ContractDetail.class, mappedBy = "contract")
+
+    @OneToMany(mappedBy = "contract")
     List<ContractDetail> contractDetailList;
 
     public Contract() {
     }
 
     public Contract(Integer id, String checkin, String checkout, Double deposit, Double totalMoney,
-                    Employee employee, Customer customer, Services services, List<ContractDetail> contractDetailList) {
+                    Employee employee, Customer customer, Services services) {
         this.id = id;
         this.checkin = checkin;
         this.checkout = checkout;
@@ -40,7 +43,7 @@ public class Contract {
         this.employee = employee;
         this.customer = customer;
         this.services = services;
-        this.contractDetailList = contractDetailList;
+
     }
 
     public Integer getId() {

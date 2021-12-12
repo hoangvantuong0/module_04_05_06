@@ -10,16 +10,16 @@ public class RentalType {
     private Integer id;
     private String name;
 
-    @OneToMany(targetEntity = Services.class, mappedBy = "rentalType")
+    @OneToMany(mappedBy = "rentalType")
     List<Services> servicesList;
 
     public RentalType() {
     }
 
-    public RentalType(Integer id, String name, List<Services> servicesList) {
+    public RentalType(Integer id, String name) {
         this.id = id;
         this.name = name;
-        this.servicesList = servicesList;
+
     }
 
     public Integer getId() {

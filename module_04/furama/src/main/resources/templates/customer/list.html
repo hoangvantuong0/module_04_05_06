@@ -107,7 +107,7 @@
                 <th:block th:each="pageNo: ${#numbers.sequence(0,customerPage.totalPages - 1)}">
                     <!--    Vòng lặp hiển thị tất cả các trong hiện có-->
                     <a class="btn btn-outline-primary btn-sm" role="button" th:href="@{/customer(page = ${pageNo})}"
-                       th:text="${pageNo}"></a>
+                       th:text="${pageNo +1}"></a>
                 </th:block>
                 <a class="btn btn-outline-primary btn-sm" role="button" th:if="${customerPage.hasNext()}"
                    th:href="@{/customer(page=${customerPage.number +1 })}">

@@ -16,7 +16,9 @@ public class Customer {
     @NotNull(message = "Please choose one")
     private CustomerType customerType;
     @Column(name = "name", columnDefinition = "VARCHAR(45)")
-    @NotBlank(message = "Wrong format! Please capitalize the first letter")
+    @NotBlank(message = "Wrong format! Please input again!")
+//    @Size(min = 6,max = 40,message = "Name too short or too long. 6-40 chars")
+//    @Pattern(regexp = "[A-Z][a-z]*([ ][A-Z][a-z]*)*", message = "Wrong format! Please capitalize the first letter")
     private String name;
     @Column(name = "birthday", columnDefinition = "VARCHAR(45)")
     @NotEmpty(message = "Birthday should not empty!")
@@ -24,27 +26,35 @@ public class Customer {
     @Column(name = "gender", columnDefinition = "VARCHAR(15)")
     @NotNull(message = "Please select a gender")
     private Boolean gender;
-    @Column(name = "idCard", columnDefinition = "VARCHAR(15)")
-    @Pattern(regexp = "[0-9]{9}|[09]{12}", message = "Wrong format! please input like the pattern!")
+    @Column(name = "idCard", columnDefinition = "VARCHAR(15)", unique=true)
+    @Pattern(regexp = "[0-9]{9}|[0-9]{12}", message = "Wrong format! please input like the pattern!")
+    @NotBlank(message = "please input!")
     private String idCard;
-    @Column(name = "phone", columnDefinition = "VARCHAR(15)")
-    @Pattern(regexp = "^(09|\\(84\\)+9)[01]\\d{7}$", message = "Wrong format! please input like the pattern!")
+    @NotBlank(message = "input please")
+    @Column(columnDefinition = "VARCHAR(45)",unique=true)
+    @Pattern(regexp = "090\\d{7}||091\\d{7}||[(]84[)][+]90\\d{7}||[(]84[)][+]91\\d{7}",
+            message = "Wrong format! please input like the pattern!")
+//    @Column(name = "phone", columnDefinition = "VARCHAR(15)")
+//    @Pattern(regexp = "^(09|\\(84\\)+9)[01]\\d{7}$", message = "Wrong format! please input like the pattern!")
     private String phone;
-    @Column(name = "email", columnDefinition = "VARCHAR(100)")
-    @Pattern(regexp = "^[a-zA-Z0-9]+@[a-z]+.[a-z]+$", message = "Wrong format! please input like the pattern!")
+    @NotBlank(message = "input please!")
+    @Column(columnDefinition = "VARCHAR(45)",unique=true)
+    @Pattern(regexp = "[^\\s@]+@[^\\s@]+\\.[^\\s@]+",message = "Wrong format! please input like the pattern!")
+//    @Column(name = "email", columnDefinition = "VARCHAR(100)")
+//    @Pattern(regexp = "^[a-zA-Z0-9]+@[a-z]+.[a-z]+$", message = "Wrong format! please input like the pattern!")
     private String email;
     @Column(name = "address", columnDefinition = "VARCHAR(100)")
     @NotBlank(message = "Please input address name")
     private String address;
 
-    @OneToMany(targetEntity = Contract.class, mappedBy = "customer")
+    @OneToMany(mappedBy = "customer")
     List<Contract> contractList;
 
     public Customer() {
     }
 
     public Customer(String id, CustomerType customerType, String name, String birthday, Boolean gender,
-                    String idCard, String phone, String email, String address, List<Contract> contractList) {
+                    String idCard, String phone, String email, String address) {
         this.id = id;
         this.customerType = customerType;
         this.name = name;
@@ -54,7 +64,7 @@ public class Customer {
         this.phone = phone;
         this.email = email;
         this.address = address;
-        this.contractList = contractList;
+
     }
 
     public String getId() {

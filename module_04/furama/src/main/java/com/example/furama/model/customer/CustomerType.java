@@ -9,16 +9,15 @@ public class CustomerType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    @OneToMany(targetEntity = Customer.class, mappedBy = "customerType")
+    @OneToMany(mappedBy = "customerType")
     List<Customer> customerList;
 
     public CustomerType() {
     }
 
-    public CustomerType(Integer id, String name, List<Customer> customerList) {
+    public CustomerType(Integer id, String name) {
         this.id = id;
         this.name = name;
-        this.customerList = customerList;
     }
 
     public Integer getId() {

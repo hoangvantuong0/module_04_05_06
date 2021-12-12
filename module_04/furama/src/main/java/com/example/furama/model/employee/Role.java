@@ -3,17 +3,18 @@ package com.example.furama.model.employee;
 import javax.persistence.*;
 import java.util.List;
 
+
 @Entity
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    @ManyToMany()
+    @ManyToMany
     @JoinTable(name = "user_role",
             joinColumns = @JoinColumn(name = "role_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id"))
-    List< User > userList;
+   private List< User > userList;
 
     public Role() {
     }

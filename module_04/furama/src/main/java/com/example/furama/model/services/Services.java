@@ -2,15 +2,13 @@ package com.example.furama.model.services;
 
 import com.example.furama.model.contract.Contract;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
 public class Services {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String name;
     private Integer area;
@@ -24,7 +22,7 @@ public class Services {
     private String description;
     private Integer poolArea;
     private Integer floor;
-    @OneToMany(targetEntity = Contract.class, mappedBy = "services")
+    @OneToMany(mappedBy = "services")
     List<Contract> contractList;
 
     public Services() {
@@ -32,7 +30,7 @@ public class Services {
 
     public Services(String id, String name, Integer area, Double cost, Integer maxPeople, RentalType rentalType,
                     ServiceType serviceType, String standard, String description, Integer poolArea,
-                    Integer floor, List<Contract> contractList) {
+                    Integer floor) {
         this.id = id;
         this.name = name;
         this.area = area;
@@ -44,7 +42,7 @@ public class Services {
         this.description = description;
         this.poolArea = poolArea;
         this.floor = floor;
-        this.contractList = contractList;
+
     }
 
     public String getId() {

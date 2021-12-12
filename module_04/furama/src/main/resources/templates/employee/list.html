@@ -22,7 +22,7 @@
                     </th:block>
                 </div>
                 <div class="col-lg-8">
-                    <form style="float: right">
+                    <form style="float: right" action="/employee/search" method="POST">
                         <label>Search by name</label>
                         <input type="text" name="name">
                         <button type="submit" class="btn btn-primary">Search</button>
@@ -114,7 +114,7 @@
                 <th:block th:each="pageNo: ${#numbers.sequence(0,employeePage.totalPages - 1)}">
                     <!--    Vòng lặp hiển thị tất cả các trong hiện có-->
                     <a class="btn btn-outline-primary btn-sm" role="button" th:href="@{/employee(page = ${pageNo})}"
-                       th:text="${pageNo}"></a>
+                       th:text="${pageNo +1}"></a>
                 </th:block>
             </div>
 

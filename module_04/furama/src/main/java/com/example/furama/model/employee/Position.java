@@ -12,16 +12,15 @@ public class Position {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    @OneToMany(targetEntity = Employee.class, mappedBy = "position")
+    @OneToMany(mappedBy = "position")
     private List<Employee> employeeList;
 
     public Position() {
     }
 
-    public Position(Integer id, String name, List<Employee> employeeList) {
+    public Position(Integer id, String name) {
         this.id = id;
         this.name = name;
-        this.employeeList = employeeList;
     }
 
     public Integer getId() {

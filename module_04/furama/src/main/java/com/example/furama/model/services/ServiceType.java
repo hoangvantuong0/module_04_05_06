@@ -9,16 +9,16 @@ public class ServiceType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    @OneToMany(targetEntity = Services.class, mappedBy = "serviceType")
+    @OneToMany(mappedBy = "serviceType")
     List<Services> servicesList;
 
     public ServiceType() {
     }
 
-    public ServiceType(Integer id, String name, List<Services> servicesList) {
+    public ServiceType(Integer id, String name) {
         this.id = id;
         this.name = name;
-        this.servicesList = servicesList;
+
     }
 
     public Integer getId() {

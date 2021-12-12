@@ -9,16 +9,16 @@ public class Division {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    @OneToMany(targetEntity = Employee.class, mappedBy = "division")
+    @OneToMany(mappedBy = "division")
     private List<Employee> employeeList;
 
     public Division() {
     }
 
-    public Division(Integer id, String name, List<Employee> employeeList) {
+    public Division(Integer id, String name) {
         this.id = id;
         this.name = name;
-        this.employeeList = employeeList;
+
     }
 
     public Integer getId() {
