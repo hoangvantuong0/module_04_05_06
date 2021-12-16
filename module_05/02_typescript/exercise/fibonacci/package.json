@@ -1,0 +1,8 @@
+{
+  "name": "fibonacci",
+  "version": "1.0.0",
+  "dependencies": {
+    "typescript": "^4.1.5",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
