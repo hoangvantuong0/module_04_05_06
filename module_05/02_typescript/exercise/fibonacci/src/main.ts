@@ -1,15 +1,16 @@
-// program to generate fibonacci series up to n terms
-
-// take input from the user
-const number = parseInt(prompt('Enter the number of terms: '));
-let n1 = 0, n2 = 1, nextTerm;
-
-console.log('Fibonacci Series:');
-
-for (let i = 1; i <= number; i++) {
-    console.log(n1);
-    nextTerm = n1 + n2;
-    n1 = n2;
-    n2 = nextTerm;
+function fibonacci(n:number): number{
+    if (n == 0)
+        return 0;
+    if (n == 1 || n == 2)
+        return 1;
+    return fibonacci(n-1) + fibonacci(n-2);
 }
 
+let sum:number = 0;
+let n:number = 10;
+console.log(n + " số fibonacci đầu tiên là: ");
+for (let i=0; i <= n ; i++){
+    console.log(fibonacci(i));
+    sum+=fibonacci(i);
+}
+console.log("Tổng " + (n + 1) +" số fibonacci trên là: " + sum);
