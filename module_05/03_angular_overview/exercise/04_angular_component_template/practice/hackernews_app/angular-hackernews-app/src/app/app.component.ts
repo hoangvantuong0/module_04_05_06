@@ -6,16 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  fontSize = 14;
-  title = 'angular-change-font-size';
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
-  changeFontSizeValue(fontSize) {
-    this.fontSize = fontSize;
-  }
+  title = 'angular-hackernews-app';
 }
