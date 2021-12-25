@@ -11,20 +11,22 @@
       && rfForm.controls.email?.invalid" style="color: red">Require Input</span>
 
       </div>
-
-      <div class="form-group">
-        <label>Password: </label>
-        <input type="text" class="form-group" formControlName="password">
-        <span *ngIf="rfForm.controls.email.dirty
-      && rfForm.controls.password?.invalid" style="color: red">Require Input</span>
-
-      </div>
-      <div class="form-group">
-        <label>Confirm Password: </label>
-        <input type="text" class="form-group" formControlName="confirmPassword">
-        <span *ngIf="rfForm.controls.email.dirty
-      && rfForm.controls.confirmPassword?.invalid" style="color: red">Require Input</span>
-
+      <div formGroupName="pwGroup">
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" class="form-control" formControlName="password">
+          <small *ngIf="rfForm.get('pwGroup.password').touched && rfForm.get('pwGroup.password').errors?.required"
+                 class="text-warning fst-italic">Please fill out this field!</small>
+          <small *ngIf="rfForm.get('pwGroup.password').dirty && rfForm.get('pwGroup.password').errors?.minlength"
+                 class="text-warning fst-italic">Please enter a valid password.
+            Acceptable passwords are at least 6 characters long</small>
+        </div>
+        <div>
+          <label for="cPassword">Confirm password:</label>
+          <input type="password" name="cPassword" id="cPassword" class="form-control" formControlName="cPassword">
+          <small *ngIf="rfForm.get('pwGroup.cPassword').touched && rfForm.get('pwGroup').errors?.passwordnotmatch"
+                 class="text-warning fst-italic">Confirm password must be equal to password!</small>
+        </div>
       </div>
       <div class="form-group">
         <label>Country: </label>
