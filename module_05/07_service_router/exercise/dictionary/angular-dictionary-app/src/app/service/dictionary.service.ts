@@ -8,23 +8,23 @@ export class DictionaryService {
   dictionary: Dictionary[] = [
     {
       id: 1,
-      word: 'student',
-      mean: 'hoc sinh'
+      word: 'cat',
+      mean: 'con mèo'
     },
     {
       id: 2,
-      word: 'table',
-      mean: 'cai ban'
+      word: 'dog',
+      mean: 'con chó'
     },
     {
       id: 3,
-      word: 'teacher',
-      mean: 'giao vien'
+      word: 'rain',
+      mean: 'mưa'
     },
     {
       id: 4,
-      word: 'book',
-      mean: 'quyen sach'
+      word: 'door',
+      mean: 'cánh cửa'
     }
   ];
 
