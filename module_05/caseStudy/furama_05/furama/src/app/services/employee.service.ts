@@ -6,24 +6,33 @@ import {Observable} from 'rxjs'
   providedIn: 'root'
 })
 export class EmployeeService {
-public API: string = 'http://localhost:3000/employees'
+  public API: string = 'http://localhost:3000/employees'
 
   constructor(
     public http: HttpClient
-  ) { }
-
-  getAllEmployees(): Observable<any>{
-  return this.http.get(this.API)
+  ) {
   }
 
-  addNewEmployee(employee):Observable<any>{
-  return this.http.post(this.API, employee);
+  getAllEmployees(): Observable<any> {
+    return this.http.get(this.API)
   }
-  getEmployeeById(employeeId):Observable<any>{
-  return this.http.get(this.API + '/' + employeeId)
+
+  addNewEmployee(employee): Observable<any> {
+    return this.http.post(this.API, employee);
+  }
+
+  getEmployeeById(employeeId): Observable<any> {
+    return this.http.get(this.API + '/' + employeeId)
+  }
+
+  deleteEmployee(employeeId): Observable<any> {
+    return this.http.delete(this.API + '/' + employeeId);
+  }
+
+  editEmployee(employee, employeeId): Observable<any> {
+    return this.http.put(this.API + '/' + employeeId, employee);
   }
 }
-
 
 
 

@@ -11,6 +11,7 @@ import { EmployeeAddComponent } from './components/employee/employee-add/employe
 import { EmployeeDeleteDialogComponent } from './components/employee/employee-delete-dialog/employee-delete-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MaterialModule} from "./material.module";
+import { EmployeeEditComponent } from './components/employee/employee-edit/employee-edit.component';
 
 
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'employee-list', component: EmployeeListComponent},
   {path: 'employee-add', component: EmployeeAddComponent},
+  {path: 'employee-edit/:id', component: EmployeeEditComponent},
 
   {path: '**', component: PageNotFoundComponent}
 ];
@@ -34,6 +36,6 @@ const routes: Routes = [
 
   ],
   exports: [RouterModule],
-  declarations: [HomeComponent, PageNotFoundComponent, EmployeeListComponent, EmployeeAddComponent, EmployeeDeleteDialogComponent]
+  declarations: [HomeComponent, PageNotFoundComponent, EmployeeListComponent, EmployeeAddComponent, EmployeeDeleteDialogComponent, EmployeeEditComponent]
 })
 export class AppRoutingModule { }

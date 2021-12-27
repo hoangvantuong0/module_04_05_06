@@ -77,45 +77,6 @@
       "phoneNumber": "0901231233",
       "address": "Đà Nẵng",
       "id": 6
-    },
-    {
-      "fullName": "Hoàng",
-      "position": "Quản Lý",
-      "academicLevel": "Đại Học",
-      "part": "Kinh Doanh",
-      "dateOfBirth": "2021-12-16",
-      "idCard": "123231451",
-      "salary": "90",
-      "email": "hoang@gmail.com",
-      "phoneNumber": "0913413425",
-      "address": "Quảng Trị",
-      "id": 7
-    },
-    {
-      "fullName": "Hồng",
-      "position": "Giám Đốc",
-      "academicLevel": "Đại Học",
-      "part": "Kinh Doanh",
-      "dateOfBirth": "2021-12-03",
-      "idCard": "134253131",
-      "salary": "71",
-      "email": "hong@gmail.com",
-      "phoneNumber": "0901232441",
-      "address": "Đà Nẵng",
-      "id": 8
-    },
-    {
-      "fullName": "Võ Văn Lâm",
-      "position": "Nhân Viên",
-      "academicLevel": "Đại Học",
-      "part": "Kinh Doanh",
-      "dateOfBirth": "2021-12-07T17:00:00.000Z",
-      "idCard": "123245132",
-      "salary": "6",
-      "email": "lam@gmail.com",
-      "phoneNumber": "0901232431",
-      "address": "Đà Nẵng",
-      "id": 9
     }
   ],
   "customers": [

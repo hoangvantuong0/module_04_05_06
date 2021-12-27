@@ -32,10 +32,12 @@ export class EmployeeListComponent implements OnInit {
         width: '500px',
         data: { data1: dataOfEmployee},
         disableClose:true
+
       });
 
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');
+        this.ngOnInit();
       });
     })
 

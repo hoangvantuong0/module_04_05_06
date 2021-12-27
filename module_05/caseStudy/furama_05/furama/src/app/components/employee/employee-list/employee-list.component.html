@@ -38,7 +38,7 @@
       <td>{{employee.phoneNumber}}</td>
       <td>{{employee.address}}</td>
       <td style="width: 12%">
-        <button class="btn btn-sm btn-warning mr-1">Sửa</button>
+        <button class="btn btn-sm btn-warning mr-1" [routerLink]="['/employee-edit/' + employee.id]">Sửa</button>
         <button class="btn btn-sm btn-danger" (click)="openDialog(employee.id)">xoá</button>
       </td>
     </tr>
