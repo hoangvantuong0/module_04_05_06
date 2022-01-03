@@ -1,82 +1,17 @@
 {
   "employees": [
     {
-      "id": 1,
-      "fullName": "Trịnh Ngọc Tuấn",
-      "position": "Nhân Viên",
+      "fullName": "Oanh",
+      "position": "Học Viên",
       "academicLevel": "Đại Học",
-      "part": "Kinh Doanh",
-      "dateOfBirth": "15/09/1994",
-      "idCard": "123452667",
-      "salary": "8",
-      "email": "tuan@gmail.com",
-      "phoneNumber": "13245364435",
-      "address": "Thanh Khê - Đà Nẵng"
-    },
-    {
-      "id": 2,
-      "fullName": "Trương Văn Hiển",
-      "position": "Giám Sát",
-      "academicLevel": "Đại Học",
-      "part": "Kinh Doanh",
-      "dateOfBirth": "23/01/1993",
-      "idCard": "18764534213",
-      "salary": "10",
-      "email": "hien@gmail.com",
-      "phoneNumber": "68756453421",
-      "address": "Đông Hà - Quảng Trị"
-    },
-    {
-      "fullName": "Hoàng Văn Tưởng",
-      "position": "Giám Đốc",
-      "academicLevel": "Đại Học",
-      "part": "Kinh Doanh",
-      "dateOfBirth": "20/03/1990",
-      "idCard": "6435241334",
-      "salary": "50",
-      "email": "hoangvan@gmail.com",
-      "phoneNumber": "3142531",
-      "address": "Quảng Trị",
-      "id": 3
-    },
-    {
-      "fullName": "Hoàng",
-      "position": "nhân viên",
-      "academicLevel": "đại học",
-      "part": "lễ tân",
-      "dateOfBirth": "2021-12-23",
-      "idCard": "1235465",
-      "salary": "12345",
-      "email": "hoangA@gmail.com",
-      "phoneNumber": "13254",
-      "address": "đà nẵng",
-      "id": 4
-    },
-    {
-      "fullName": "Toàng",
-      "position": "Quản lý",
-      "academicLevel": "Cao Đẳng",
-      "part": "Quản Lý",
-      "dateOfBirth": "2021-12-03",
-      "idCard": "1234565",
-      "salary": "1234657",
-      "email": "toan@gmail.com",
-      "phoneNumber": "132455",
-      "address": "Huế",
-      "id": 5
-    },
-    {
-      "fullName": "Phương",
-      "position": "Nhân Viên",
-      "academicLevel": "Đại Học",
-      "part": "Lễ Tân",
-      "dateOfBirth": "2021-12-29",
-      "idCard": "123421453",
-      "salary": "8",
-      "email": "phuong@gmail.com",
-      "phoneNumber": "0901231233",
+      "part": "CodeGym",
+      "dateOfBirth": "2021-12-15T17:00:00.000Z",
+      "idCard": "134513455",
+      "salary": "1",
+      "email": "oanh@gmail.com",
+      "phoneNumber": "0904322321",
       "address": "Đà Nẵng",
-      "id": 6
+      "id": 1
     }
   ],
   "customers": [

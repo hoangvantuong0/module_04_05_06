@@ -1,0 +1,71 @@
+<h3 class="text-center">Chỉnh sửa thông tin</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formEdit">
+  <div class="form-group">
+    <p>Mã Bệnh Án</p>
+    <input class="form-control" type="text" formControlName="medical_id" readonly>
+    <p *ngIf="formEdit.controls.medical_id.errors?.required && formEdit.controls.medical_id.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+
+  <div class="form-group">
+    <p>Mã Bệnh Nhân</p>
+    <input class="form-control" type="text" formControlName="patient_id" readonly>
+    <p *ngIf="formEdit.controls.patient_id.errors?.required && formEdit.controls.patient_id.touched"
+       class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+  <div class="form-group">
+    <p>Tên Bệnh Nhân</p>
+    <input class="form-control" type="text" formControlName="name">
+    <p *ngIf="formEdit.controls.name.errors?.required && formEdit.controls.name.touched"
+       class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+  <div class="form-group">
+    <p>Ngày Nhập Viện</p>
+    <input class="form-control" type="date" formControlName="date_in">
+    <!--    <mat-form-field>-->
+    <!--      <input [min]="minDate" [max] ="maxDate" class="form-control" formControlName="date_in" matInput [matDatepicker]="picker" placeholder="Chọn ngày">-->
+    <!--      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
+    <!--      <mat-datepicker #picker></mat-datepicker>-->
+    <!--    </mat-form-field>-->
+    <p *ngIf="formEdit.controls.date_in.errors?.required && formEdit.controls.date_in.touched"
+       class="text-danger">Vui lòng chọn ngày!</p>
+
+  </div>
+  <div class="form-group">
+    <p>Ngày Xuất Viện</p>
+    <input class="form-control" type="date" formControlName="date_out">
+    <!--    <mat-form-field>-->
+    <!--      <input [min]="minDate" [max] ="maxDate" class="form-control" formControlName="date_out" matInput [matDatepicker]="picker" placeholder="Chọn ngày">-->
+    <!--      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
+    <!--      <mat-datepicker #picker></mat-datepicker>-->
+    <!--    </mat-form-field>-->
+    <p *ngIf="formEdit.controls.date_out.errors?.required && formEdit.controls.date_out.touched"
+       class="text-danger">Vui lòng chọn ngày!</p>
+
+  </div>
+
+  <div class="form-group">
+    <p>Lý Do</p>
+    <input class="form-control" type="text" formControlName="reason">
+    <p *ngIf="formEdit.controls.reason.errors?.required && formEdit.controls.reason.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+  <div class="form-group">
+    <p>P.P Điều Trị</p>
+    <input class="form-control" type="text" formControlName="method">
+    <p *ngIf="formEdit.controls.method.errors?.required && formEdit.controls.method.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+  <div class="form-group">
+    <p>BS Điều Trị</p>
+    <input class="form-control" type="text" formControlName="doctor">
+    <p *ngIf="formEdit.controls.doctor.errors?.required && formEdit.controls.doctor.touched" class="text-danger">Vui lòng nhập lại!</p>
+  </div>
+
+
+</form>
+<div class="row d-flex justify-content-center mt-4">
+  <button [disabled]="formEdit.invalid" class="btn btn-success" (click)="editMedical()">Cập nhật</button>
+</div>

@@ -1,0 +1,60 @@
+<h3 class="text-center">Thông Tin Chi Tiết</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formEditEmployee">
+  <div class="form-group">
+    <p>Họ Và Tên</p>
+    <input class="form-control" type="text" formControlName="fullName">
+  </div>
+
+  <div class="form-group">
+    <p>Vị Trí</p>
+    <input class="form-control" type="text" formControlName="position">
+  </div>
+
+  <div class="form-group">
+    <p>Trình Độ</p>
+    <input class="form-control" type="text" formControlName="academicLevel">
+  </div>
+
+  <div class="form-group">
+    <p>Bộ Phận</p>
+    <input class="form-control" type="text" formControlName="part">
+
+  </div>
+
+  <div class="form-group">
+    <p>Ngày Sinh</p>
+      <input class="form-control" formControlName="dateOfBirth">
+  </div>
+
+  <div class="form-group">
+    <p>Số CMTND</p>
+    <input class="form-control" type="text" formControlName="idCard">
+
+  </div>
+
+  <div class="form-group">
+    <p>Mức Lương</p>
+    <input class="form-control" type="text" formControlName="salary">
+  </div>
+
+  <div class="form-group">
+    <p>Email</p>
+    <input class="form-control" type="text" formControlName="email">
+
+  </div>
+
+  <div class="form-group">
+    <p>Số Điện Thoại</p>
+    <input class="form-control" type="text" formControlName="phoneNumber">
+  </div>
+
+  <div class="form-group">
+    <p>Địa Chỉ</p>
+    <input class="form-control" type="text" formControlName="address">
+  </div>
+
+</form>
+<div class="row d-flex justify-content-center mt-4">
+  <button [routerLink]="['/employee-list']" >Trở Lại</button>
+</div>

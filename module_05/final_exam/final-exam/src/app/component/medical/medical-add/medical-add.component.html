@@ -1,0 +1,59 @@
+<h3 class="text-center">Thêm Mới Câu Hỏi</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formAdd">
+  <div class="form-group">
+    <p>Mã Bệnh Án</p>
+    <input class="form-control" type="text" formControlName="medical_id">
+    <p *ngIf="formAdd.controls.medical_id.errors?.required && formAdd.controls.medical_id.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+  <div class="form-group">
+    <p>Mã Bệnh Nhân</p>
+    <input class="form-control" type="text" formControlName="patient_id">
+    <p *ngIf="formAdd.controls.patient_id.errors?.required && formAdd.controls.patient_id.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+  <div class="form-group">
+    <p>Tên Bệnh Nhân</p>
+    <input class="form-control" type="text" formControlName="name">
+    <p *ngIf="formAdd.controls.name.errors?.required && formAdd.controls.name.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+  <div class="form-group">
+    <p>Ngày Nhập Viện</p>
+        <input class="form-control" type="date" formControlName="date_in">
+
+    <p *ngIf="formAdd.controls.date_in.errors?.required && formAdd.controls.date_in.touched"
+       class="text-danger">Vui lòng chọn ngày!</p>
+
+  </div>
+  <div class="form-group">
+    <p>Ngày Xuất Viện</p>
+        <input class="form-control" type="date" formControlName="date_out">
+
+    <p *ngIf="formAdd.controls.date_out.errors?.required && formAdd.controls.date_out.touched"
+       class="text-danger">Vui lòng chọn ngày!</p>
+
+  </div>
+
+  <div class="form-group">
+    <p>Lý Do</p>
+    <input class="form-control" type="text" formControlName="reason">
+    <p *ngIf="formAdd.controls.reason.errors?.required && formAdd.controls.reason.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+  <div class="form-group">
+    <p>P.P Điều Trị</p>
+    <input class="form-control" type="text" formControlName="method">
+    <p *ngIf="formAdd.controls.method.errors?.required && formAdd.controls.method.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+  <div class="form-group">
+    <p>BS Điều Trị</p>
+    <input class="form-control" type="text" formControlName="doctor">
+    <p *ngIf="formAdd.controls.doctor.errors?.required && formAdd.controls.doctor.touched" class="text-danger">Vui lòng nhập lại!</p>
+  </div>
+
+</form>
+<div class="row d-flex justify-content-center mt-4">
+  <button [disabled]="formAdd.invalid" class="btn btn-success" (click)="addNewMedicall()">Thêm Mới</button>
+</div>

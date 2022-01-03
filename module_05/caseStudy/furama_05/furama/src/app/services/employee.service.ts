@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
+// tslint:disable-next-line:import-spacing
 import {HttpClient}from '@angular/common/http';
-import {Observable} from 'rxjs'
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
-  public API: string = 'http://localhost:3000/employees'
+  public API = 'http://localhost:3000/employees';
 
   constructor(
     public http: HttpClient
@@ -14,7 +15,7 @@ export class EmployeeService {
   }
 
   getAllEmployees(): Observable<any> {
-    return this.http.get(this.API)
+    return this.http.get(this.API);
   }
 
   addNewEmployee(employee): Observable<any> {
@@ -22,7 +23,7 @@ export class EmployeeService {
   }
 
   getEmployeeById(employeeId): Observable<any> {
-    return this.http.get(this.API + '/' + employeeId)
+    return this.http.get(this.API + '/' + employeeId);
   }
 
   deleteEmployee(employeeId): Observable<any> {
@@ -31,6 +32,7 @@ export class EmployeeService {
 
   editEmployee(employee, employeeId): Observable<any> {
     return this.http.put(this.API + '/' + employeeId, employee);
+
   }
 }
 

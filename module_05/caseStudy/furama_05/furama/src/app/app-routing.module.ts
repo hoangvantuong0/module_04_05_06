@@ -3,15 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
-import {CommonModule} from "@angular/common";
+import {CommonModule} from '@angular/common';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { EmployeeAddComponent } from './components/employee/employee-add/employee-add.component';
 import { EmployeeDeleteDialogComponent } from './components/employee/employee-delete-dialog/employee-delete-dialog.component';
-import {MatDialogModule} from "@angular/material/dialog";
-import {MaterialModule} from "./material.module";
+import {MatDialogModule} from '@angular/material/dialog';
+import {MaterialModule} from './material.module';
 import { EmployeeEditComponent } from './components/employee/employee-edit/employee-edit.component';
+import { EmployeeDetailComponent } from './components/employee/employee-detail/employee-detail.component';
 
 
 
@@ -20,8 +21,9 @@ const routes: Routes = [
   {path: 'employee-list', component: EmployeeListComponent},
   {path: 'employee-add', component: EmployeeAddComponent},
   {path: 'employee-edit/:id', component: EmployeeEditComponent},
+  {path: 'employee-detail/:id', component: EmployeeDetailComponent},
 
-  {path: '**', component: PageNotFoundComponent}
+  {path: '**', component: PageNotFoundComponent},
 ];
 
 @NgModule({
@@ -36,6 +38,13 @@ const routes: Routes = [
 
   ],
   exports: [RouterModule],
-  declarations: [HomeComponent, PageNotFoundComponent, EmployeeListComponent, EmployeeAddComponent, EmployeeDeleteDialogComponent, EmployeeEditComponent]
+  declarations: [
+    HomeComponent,
+    PageNotFoundComponent,
+    EmployeeListComponent,
+    EmployeeAddComponent,
+    EmployeeDeleteDialogComponent,
+    EmployeeEditComponent,
+    EmployeeDetailComponent]
 })
 export class AppRoutingModule { }

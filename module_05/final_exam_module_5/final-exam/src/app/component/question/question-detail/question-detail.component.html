@@ -1,0 +1,32 @@
+<h3 class="text-center">Chi Tiết</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formEdit">
+  <div class="form-group">
+    <p>Tiêu Đề</p>
+    <input class="form-control" type="text" formControlName="title">
+
+  </div>
+
+  <div class="form-group">
+    <p>Loại Câu Hỏi</p>
+    <input class="form-control" type="text" formControlName="type_of_question">
+
+  </div>
+
+  <div class="form-group">
+    <p>Trạng Thái</p>
+    <input class="form-control" type="text" formControlName="status">
+
+  </div>
+
+  <div class="form-group">
+    <p>Ngày Đăng</p>
+    <!--    <input class="form-control" type="date" formControlName="date">-->
+    <input class="form-control" type="date" formControlName="date">
+
+  </div>
+
+</form>
+<div class="row d-flex justify-content-center mt-4">
+  <button [routerLink]="['/question-list']">Quay lại</button>
+</div>

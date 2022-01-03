@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a336bee2-ef59-4bf2-9b52-29aeb32f5834" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-detail/employee-detail.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-detail/employee-detail.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-detail/employee-detail.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-detail/employee-detail.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/final_exam.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-add/medical-add.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-add/medical-add.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-add/medical-add.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-add/medical-add.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-delete/medical-delete.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-delete/medical-delete.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-delete/medical-delete.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-delete/medical-delete.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-edit/medical-edit.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-edit/medical-edit.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-edit/medical-edit.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-edit/medical-edit.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-list/medical-list.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-list/medical-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-list/medical-list.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/component/medical/medical-list/medical-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/material.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/service/medical.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/app/service/medical.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/json-server/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final-exam/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/.idea/final_exam_module_5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/app/json-server/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/app/material.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final_exam_module_5/final-exam/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical/src/main/java/com/example/medical/controller/MedicalRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical/src/main/java/com/example/medical/model/Medical.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical/src/main/java/com/example/medical/model/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical/src/main/java/com/example/medical/repository/IMedicalRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical/src/main/java/com/example/medical/repository/IPatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical/src/main/java/com/example/medical/service/IMedicalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical/src/main/java/com/example/medical/service/IPatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical/src/main/java/com/example/medical/service/impl/MedicalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../medical/src/main/java/com/example/medical/service/impl/PatientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-add/employee-add.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-add/employee-add.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-delete-dialog/employee-delete-dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-delete-dialog/employee-delete-dialog.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-delete-dialog/employee-delete-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-delete-dialog/employee-delete-dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-edit/employee-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-edit/employee-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-edit/employee-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-edit/employee-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-list/employee-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-list/employee-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-list/employee-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/components/employee/employee-list/employee-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/material.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/material.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/services/employee.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/app/services/employee.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/json-server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy/furama_05/furama/src/json-server/db.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="22vA0FS8WUXBN8rR7RWapSvZ4qr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/final-exam/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a336bee2-ef59-4bf2-9b52-29aeb32f5834" name="Changes" comment="" />
+      <created>1640707462955</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640707462955</updated>
+      <workItem from="1640707464984" duration="3019000" />
+      <workItem from="1640710550508" duration="284000" />
+      <workItem from="1640710854722" duration="25000" />
+      <workItem from="1640744116595" duration="4217000" />
+      <workItem from="1640748796752" duration="609000" />
+      <workItem from="1640749476010" duration="2699000" />
+      <workItem from="1640849858616" duration="708000" />
+      <workItem from="1640922098915" duration="184000" />
+      <workItem from="1641103603834" duration="478000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

@@ -1,0 +1,61 @@
+<div class="row justify-content-between">
+  <h2>Danh Sách Câu Hỏi</h2>
+  <div class="d-flex">
+    <input class="form-control mr-3" type="text" style="width: 400px" placeholder="Tìm kiếm theo tên" [(ngModel)]="term">
+    <button class="btn-outline-success">Search</button>
+  </div>
+</div>
+<div class="row mt-3 px-3">
+  <button class="btn btn-success" [routerLink]="['/question-add']">Thêm Mới</button>
+  <table class="table mt-3 table-striped" style="font-size: 12px">
+    <thead>
+    <tr>
+      <th>Số thứ tự</th>
+      <th>Tiêu đề</th>
+      <th>Loại câu hỏi</th>
+      <th>Ngày đăng</th>
+      <th>Tình trạng</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let question of questions |filter:term | paginate: { itemsPerPage: 3, currentPage: p }; index as i">
+<!--    <tr *ngFor="let question of questions |filter:term ; index as i">-->
+<!--    <tr *ngFor="let question of questions ; index as i">-->
+<!--<tr *ngFor="let question of questions ">-->
+<!--<tr *ngFor="let question of questions">-->
+      <td>{{i + 1}}</td>
+<!--      <td>{{question.id}}</td>-->
+      <td>{{question.title}}</td>
+      <td>{{question.type_of_question}}</td>
+      <td>{{question.date | date}}</td>
+      <td>{{question.status}}</td>
+      <td style="width: 12%">
+        <button class="btn btn-sm btn-warning mr-1" [routerLink]="['/question-edit/' + question.id]">Sửa</button>
+        <button class="btn btn-sm btn-danger" (click)="openDialog(question.id)">Xoá</button>
+        <button class="btn btn-sm btn-danger" [routerLink]="['/question-detail/' + question.id]">Chi Tiết</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

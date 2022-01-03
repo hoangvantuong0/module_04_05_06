@@ -28,12 +28,13 @@
   <div class="form-group">
     <p>Ngày Sinh</p>
     <mat-form-field>
-      <input [min]="minDate" [max] ="maxDate" class="form-control" formControlName="dateOfBirth" matInput [matDatepicker]="picker" placeholder="Chọn ngày sinh">
+      <input [min]="minDate" [max] ="maxDate" class="form-control" formControlName="dateOfBirth" matInput
+             [matDatepicker]="picker" placeholder="Chọn ngày sinh">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
     <p *ngIf="formEditEmployee.controls.dateOfBirth.errors?.required && formEditEmployee.controls.dateOfBirth.touched"
-       class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+       class="text-danger">Vui lòng chọn ngày sinh!</p>
 
   </div>
   <div class="form-group">

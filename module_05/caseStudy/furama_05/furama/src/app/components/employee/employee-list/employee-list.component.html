@@ -39,7 +39,8 @@
       <td>{{employee.address}}</td>
       <td style="width: 12%">
         <button class="btn btn-sm btn-warning mr-1" [routerLink]="['/employee-edit/' + employee.id]">Sửa</button>
-        <button class="btn btn-sm btn-danger" (click)="openDialog(employee.id)">xoá</button>
+        <button class="btn btn-sm btn-danger" (click)="openDialog(employee.id)">Xoá</button>
+        <button class="btn btn-sm btn-danger" [routerLink]="['/employee-detail/' + employee.id]">Chi Tiết</button>
       </td>
     </tr>
     </tbody>

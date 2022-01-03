@@ -34,19 +34,20 @@ export class EmployeeEditComponent implements OnInit {
       salary: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
       email: ['', [Validators.required, Validators.email]],
       phoneNumber: ['', [Validators.required, Validators.pattern('^(090|091|([\(]84[\)][\+]90)|([\(]84[\)][\+]91))[0-9]{7}$')]],
-      address: ['', [Validators.required]]
+      address: ['', [Validators.required]],
     })
     this.activatedRouter.params.subscribe(data => {
       this.employeeOfId = data.id;
       this.employeeService.getEmployeeById(this.employeeOfId).subscribe(data => {
         this.formEditEmployee.patchValue(data);
-      })
-    })
+        console.log(this.formEditEmployee);
+      });
+    });
   }
   editEmployee(){
-    this.employeeService.editEmployee(this.employeeOfId.value, this.employeeOfId).subscribe(data=>{
+    this.employeeService.editEmployee(this.formEditEmployee.value, this.employeeOfId).subscribe(data=>{
       this.router.navigateByUrl('employee-list');
-    })
+    });
   }
 }
 

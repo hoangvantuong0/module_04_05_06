@@ -1,0 +1,38 @@
+<h3 class="text-center">Cập nhật</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formEdit">
+  <div class="form-group">
+    <p>Tiêu Đề</p>
+    <input class="form-control" type="text" formControlName="title">
+    <p *ngIf="formEdit.controls.title.errors?.required && formEdit.controls.title.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+  <div class="form-group">
+    <p>Loại Câu Hỏi</p>
+    <input class="form-control" type="text" formControlName="type_of_question">
+    <p *ngIf="formEdit.controls.type_of_question.errors?.required && formEdit.controls.type_of_question.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+  <div class="form-group">
+    <p>Trạng Thái</p>
+    <input class="form-control" type="text" formControlName="status">
+    <p *ngIf="formEdit.controls.status.errors?.required && formEdit.controls.status.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+  <div class="form-group">
+    <p>Ngày Đăng</p>
+    <!--    <input class="form-control" type="date" formControlName="date">-->
+    <mat-form-field>
+      <input [min]="minDate" [max] ="maxDate" class="form-control" formControlName="date" matInput [matDatepicker]="picker" placeholder="Chọn ngày">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <p *ngIf="formEdit.controls.date.errors?.required && formEdit.controls.date.touched"
+       class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+
+  </div>
+
+</form>
+<div class="row d-flex justify-content-center mt-4">
+  <button [disabled]="formEdit.invalid" class="btn btn-success" (click)="editQuestion()">Cập Nhật</button>
+</div>

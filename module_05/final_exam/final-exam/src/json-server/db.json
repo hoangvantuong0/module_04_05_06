@@ -1,0 +1,59 @@
+{
+  "medical": [
+    {
+      "medical_id": "BA-001",
+      "patient_id": "BN-435",
+      "name": "Nguyễn Văn An",
+      "date_in": "2021-12-15",
+      "date_out": "2021-12-15",
+      "reason": "Suy thận",
+      "method": "Chạy thận",
+      "doctor": "Lê Văn B",
+      "id": 1
+    },
+    {
+      "medical_id": "BA-002",
+      "patient_id": "BN-003",
+      "name": "Nguyễn Thị B",
+      "date_in": "2021-12-16",
+      "date_out": "2021-12-05",
+      "reason": "Đau Bụng",
+      "method": "Mổ",
+      "doctor": "Toàn",
+      "id": 2
+    },
+    {
+      "medical_id": "BA-908",
+      "patient_id": "BN-981",
+      "name": "Trần Văn G",
+      "date_in": "2021-12-24",
+      "date_out": "2021-12-02",
+      "reason": "Ngã",
+      "method": "Mổ ",
+      "doctor": "Hiền",
+      "id": 4
+    },
+    {
+      "medical_id": "BA-012",
+      "patient_id": "BN-452",
+      "name": "Trần Hữu Quốc",
+      "date_in": "2021-12-24",
+      "date_out": "2021-12-18",
+      "reason": "Đau đầu",
+      "method": "Uống thuốc",
+      "doctor": "Quyền",
+      "id": 5
+    },
+    {
+      "medical_id": "BA-019",
+      "patient_id": "BN-341",
+      "name": "Lương Ngọc H",
+      "date_in": "2021-12-17",
+      "date_out": "2021-12-18",
+      "reason": "Chấn thương vùng đầu",
+      "method": "Mổ",
+      "doctor": "Minh",
+      "id": 6
+    }
+  ]
+}

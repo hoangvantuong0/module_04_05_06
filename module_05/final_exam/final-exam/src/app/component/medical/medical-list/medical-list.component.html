@@ -1,0 +1,65 @@
+<div class="row justify-content-between">
+  <h2>Danh Sách Bệnh Án</h2>
+  <div class="d-flex">
+    <input class="form-control mr-3" type="text" style="width: 400px" placeholder="Tìm kiếm theo tên bệnh nhân">
+    <button class="btn-outline-success">Search</button>
+  </div>
+</div>
+<div class="row mt-3 px-3">
+  <button class="btn btn-success" [routerLink]="['/medical-add']">Thêm Mới</button>
+  <table class="table mt-3 table-striped" style="font-size: 12px">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Mã Bệnh Án</th>
+      <th>Mã Bệnh Nhân</th>
+      <th>Tên Bệnh Nhân</th>
+      <th>Ngày Nhập Viện</th>
+      <th>Ngày Ra Viện</th>
+      <th>Lý Do</th>
+      <th>P.P Điều Trị</th>
+      <th>B.S Điều Trị</th>
+      <th>Action</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let medical of medicals | paginate: { itemsPerPage: 5, currentPage: p }; index as i">
+            <td>{{i + 1}}</td>
+            <td>{{medical.medical_id}}</td>
+            <td>{{medical.patient_id}}</td>
+            <td>{{medical.name}}</td>
+            <td>{{medical.date_in}}</td>
+            <td>{{medical.date_out}}</td>
+            <td>{{medical.reason}}</td>
+            <td>{{medical.method}}</td>
+            <td>{{medical.doctor}}</td>
+
+            <td style="width: 12%">
+        <button class="btn btn-sm btn-warning mr-1" [routerLink]="['/medical-edit/' + medical.id]">Sửa</button>
+        <button class="btn btn-sm btn-danger" (click)="openDialog(medical.id)">Xoá</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
