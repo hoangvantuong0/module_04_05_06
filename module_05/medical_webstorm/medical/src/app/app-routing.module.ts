@@ -27,7 +27,8 @@ const routes: Routes = [
     FormsModule,
     Ng2SearchPipeModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule],
+    ReactiveFormsModule
+  ],
   exports: [RouterModule],
   declarations: [CreateComponent,
     DetailComponent,
