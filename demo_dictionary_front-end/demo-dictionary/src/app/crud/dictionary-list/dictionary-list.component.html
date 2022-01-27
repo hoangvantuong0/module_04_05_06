@@ -4,6 +4,40 @@
 
 </div>
 
+
+<!--<div class="row align-items-center mt-4">-->
+<!--  <form [formGroup]="sForm" (ngSubmit)="search()">-->
+<!--    <div class="row">-->
+<!--      <div class="col-1">-->
+<!--        <button class="btn btn-sm btn-outline-primary" type="submit"-->
+<!--                *ngIf="showBack === 'True'" (click)="Back()">Back-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <div class="col-5">-->
+<!--        <input class="form-control me-2" type="search"  name="keyWord"-->
+<!--               placeholder="Search word " aria-label="Search">-->
+<!--      </div>-->
+<!--      <div class="col-5">-->
+<!--        <input class="form-control me-2" type="search" name="mean" formControlName="sMean"-->
+<!--               placeholder="Search mean" aria-label="Search">-->
+<!--      </div>-->
+<!--      <div class="col-1">-->
+<!--        <button class="btn  btn-outline-primary" type="submit">Search</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </form>-->
+<!--</div>-->
+<div>
+  <form>
+    <input id="searchDictionary" name="keyWord" type="text" [(ngModel)]="keyWord" (ngModelChange)="search()"
+           class="form-control " placeholder="Insert word">
+    <button class="btn  btn-outline-primary" type="submit">Search</button>
+  </form>
+
+</div>
+
+
+
 <div class="d-flex">
   <div class="col-2">
     <button class="btn btn-success float-left" [routerLink]="['/dictionary-create']">단어 추가</button>
@@ -27,10 +61,13 @@
       <th>단어</th>
       <th>의미</th>
       <th>한자</th>
-      <th>예</th>
+      <th>월-한자</th>
+      <th>기타</th>
+<!--      <th>예</th>-->
 
       <th>수정</th>
       <th>삭제</th>
+      <th>예</th>
 
 
     </tr>
@@ -41,12 +78,20 @@
       <td>{{dictionary.word}}</td>
       <td>{{dictionary.mean}}</td>
       <td>{{dictionary.description}}</td>
-      <td>{{dictionary.example}}</td>
+      <td>{{dictionary.detail}}</td>
+      <td>{{dictionary.extend}}</td>
+<!--      <td>{{dictionary.example}}</td>-->
 
       <td style="width: 12%">
-        <button class="btn btn-sm btn-warning mr-1" [routerLink]="['/dictionary-edit/', dictionary.id]">Sửa</button>
-        <button class="btn btn-sm btn-danger" (click)="openDialog(dictionary.id)">Xoá</button>
+        <button class="btn btn-sm btn-warning" style="text-align: center" [routerLink]="['/dictionary-edit/', dictionary.id]">Sửa</button>
       </td>
+      <td style="width: 12%">
+        <button class="btn btn-sm btn-danger"  style="text-align: center" (click)="openDialog(dictionary.id)">Xoá</button>
+      </td>
+     <td style="width: 12%">
+       <button class="btn btn-sm btn-outline-success"  style="text-align: center" (click)="openDialogDetail(dictionary.id)">Ví dụ</button>
+     </td>
+
     </tr>
     </tbody>
   </table>

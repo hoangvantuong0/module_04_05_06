@@ -9,6 +9,7 @@ import { DictionaryDeleteComponent } from './crud/dictionary-delete/dictionary-d
 
 import { DictionaryCreateComponent } from './crud/dictionary-create/dictionary-create.component';
 import { DictionaryEditComponent } from './crud/dictionary-edit/dictionary-edit.component';
+import { DictionaryDetailComponent } from './crud/dictionary-detail/dictionary-detail.component';
 
 
 const routes: Routes = [
@@ -30,7 +31,8 @@ const routes: Routes = [
     DictionaryListComponent,
     DictionaryDeleteComponent,
     DictionaryCreateComponent,
-    DictionaryEditComponent
+    DictionaryEditComponent,
+    DictionaryDetailComponent
   ]
 })
 export class AppRoutingModule { }

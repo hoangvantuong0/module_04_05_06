@@ -28,6 +28,7 @@ export class DictionaryEditComponent implements OnInit {
       word: ['', [Validators.required]],
       mean: ['', [Validators.required]],
       description: ['', [Validators.required]],
+      detail: ['', [Validators.required]],
       example: ['', [Validators.required]],
 
     });

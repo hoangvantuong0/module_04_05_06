@@ -24,6 +24,8 @@ export class DictionaryCreateComponent implements OnInit {
       word: ['', [Validators.required]],
       mean: ['', [Validators.required]],
       description: ['', [Validators.required]],
+      detail: ['', [Validators.required]],
+      extend: ['', [Validators.required]],
       example: ['', [Validators.required]],
       // date_out: ['', [Validators.required]],
       // reason: ['', [Validators.required]],

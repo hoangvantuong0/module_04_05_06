@@ -7,10 +7,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,12 +27,12 @@ import java.util.Optional;
 //@RequestMapping("/dictionary")
 public class DictionaryController {
 
-    private List<Dictionary> dictionaries = new ArrayList<Dictionary>();
+//    private List<Dictionary> dictionaries = new ArrayList<Dictionary>();
     @Autowired
     IDictionaryService dictionaryService;
 
 
-    //webService
+//    webService
     @GetMapping("api/dictionary")
     public ResponseEntity<Page<Dictionary>> getAllDictionary(@RequestParam(defaultValue = "0") int page) {
         try {
@@ -70,19 +74,32 @@ public class DictionaryController {
     public void updateDictionary(@RequestBody Dictionary dictionary) {
         dictionaryService.save(dictionary);
         }
+
+    @GetMapping ("api/dictionary?{name}")
+    public ResponseEntity<Page<Dictionary>> search(@PathVariable String name, Pageable pageable) {
+        try {
+            Page<Dictionary> dictionaryPage = dictionaryService.searchByName(name, pageable);
+            if (dictionaryPage.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity<Page<Dictionary>>(dictionaryPage, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
     }
+}
 
 //webservice
-
-//        @PostMapping("search")
-//        public String search(@RequestParam @PageableDefault(size = 5) String name,
-//                             Model model, Pageable pageable) {
-//            Page<Dictionary> dictionaryPage = dictionaryService.searchByName(name, pageable);
-//            model.addAttribute("dictionaryPage", dictionaryPage);
-//            return "dictionary/list";
-//        }
-
-
+//
+//    @PostMapping("search")
+//    public String search(@RequestParam @PageableDefault(size = 5) String name,
+//                         Model model, Pageable pageable) {
+//        Page<Dictionary> dictionaryPage = dictionaryService.searchByName(name, pageable);
+//        model.addAttribute("dictionaryPage", dictionaryPage);
+//        return "dictionary/list";
+//    }
+//
+//
 //    @GetMapping
 //    public String showList(@PageableDefault(size = 5) Pageable pageable, Model model) {
 //        // Sắp xếp tên theo thứ tự tăng dần
@@ -91,7 +108,7 @@ public class DictionaryController {
 //        model.addAttribute("dictionaryPage", dictionaryPage);
 //        return "dictionary/list";
 //    }
-
+//
 //
 //    @GetMapping("/create")
 //    public String showFormCreate(Model model) {
@@ -146,7 +163,4 @@ public class DictionaryController {
 //        return "redirect:/dictionary";
 //    }
 //
-
-
-
 //}

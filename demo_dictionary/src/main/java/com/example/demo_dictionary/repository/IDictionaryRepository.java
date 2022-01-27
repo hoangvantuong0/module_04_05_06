@@ -8,13 +8,14 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+
 @Repository
 public interface IDictionaryRepository extends JpaRepository<Dictionary, Integer> {
 
     @Override
     Page< Dictionary > findAll(Pageable pageable);
-    // Search by name
-    @Query(value = "SELECT * FROM demo_dictionary.dictionary d\n" +
-            "where d.word like concat('%',trim(:word), '%')", nativeQuery = true)
-    Page< Dictionary > searchByName(@Param("word") String name, Pageable pageable);
+    // Search
+    @Query(value = "SELECT * FROM demo_dictionary.dictionary d " +
+            " where d.word like concat('%',trim(:word), '%') or d.mean like concat('%',trim(:word), '%')", nativeQuery = true)
+    Page< Dictionary > searchByName(@Param("word") String name,  Pageable pageable);
 }

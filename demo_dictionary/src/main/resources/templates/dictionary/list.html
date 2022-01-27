@@ -42,6 +42,7 @@
                     <th class="text-center">단어</th>
                     <th class="text-center">의미</th>
                     <th class="text-center">한자</th>
+                    <th class="text-center">월-한자</th>
                     <th class="text-center">예</th>
                     <th class="text1">수정</th>
                     <th class="text2">삭제</th>
@@ -54,6 +55,7 @@
                         <td class="text-center" th:text="${dictionary.word}"></td>
                         <td class="text-center" th:text="${dictionary.mean}"></td>
                         <td class="text-center" th:text="${dictionary.description}"></td>
+                        <td class="text-center" th:text="${dictionary.explain}"></td>
                         <td class="textarea" th:text="${dictionary.example}"></td>
                         <td class="text-center">
                             <a class="btn btn-primary" th:href="@{/dictionary/edit/__${dictionary.id}__ }" role="button">Edit</a>

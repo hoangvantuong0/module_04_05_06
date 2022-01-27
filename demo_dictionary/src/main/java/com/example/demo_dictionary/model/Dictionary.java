@@ -11,17 +11,21 @@ public class Dictionary {
     private String word;
     private String mean;
     private String description;
+    private String detail;
+    private String extend;
     private String example;
 
 
     public Dictionary() {
     }
 
-    public Dictionary(int id, String word, String mean, String description, String example) {
+    public Dictionary(int id, String word, String mean, String description, String detail, String extend, String example) {
         this.id = id;
         this.word = word;
         this.mean = mean;
         this.description = description;
+        this.detail = detail;
+        this.extend = extend;
         this.example = example;
     }
 
@@ -55,6 +59,22 @@ public class Dictionary {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
+    public String getExtend() {
+        return extend;
+    }
+
+    public void setExtend(String extend) {
+        this.extend = extend;
     }
 
     public String getExample() {

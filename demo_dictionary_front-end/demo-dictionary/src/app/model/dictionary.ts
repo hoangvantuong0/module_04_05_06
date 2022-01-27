@@ -3,6 +3,8 @@ export interface Dictionary {
   word: string;
   mean: string;
   description: string;
+  detail: string;
+  extend: string;
   example: string;
 }
 
