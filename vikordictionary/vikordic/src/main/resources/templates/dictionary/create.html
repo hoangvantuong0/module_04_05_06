@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous">
+</head>
+<body>
+<header th:insert="~{/layout::header1}"></header>
+<div class="container-fluid">
+  <form class="col-6  m-auto" form th:action="@{/dictionary/create}" th:object="${dictionary}" method="post">
+    <h3>Create new word</h3>
+    <div class="form-group col-12">
+      <label class="col-12 float-left">Word:</label>
+      <input type="text" th:field="*{word}" class="form-control col-12 float-left mt-2"
+             placeholder="Enter word">
+    </div>
+
+    <div class="form-group col-12">
+      <label class="col-12 float-left">Chinese:</label>
+      <input type="text" th:field="*{chinese}" class="form-control col-12 float-left mt-2"
+             placeholder="Enter chinese">
+    </div>
+
+    <div class="form-group col-12">
+      <label class="col-12 float-left">Sino:</label>
+      <input type="text" th:field="*{sino}" class="form-control col-12 float-left mt-2"
+             placeholder="Enter Sino">
+    </div>
+
+
+    <div class="form-group col-12">
+      <label class="col-12 float-left">Mean:</label>
+      <input type="text" th:field="*{mean}" class="form-control col-12 float-left mt-2"
+             placeholder="Enter mean">
+    </div>
+
+
+    <div class="form-group col-12">
+      <label class="col-12 float-left">Derivative:</label>
+      <input type="text" th:field="*{derivative}" class="form-control col-12 float-left mt-2"
+             placeholder="Enter Derivative">
+    </div>
+
+
+
+    <div class="form-group col-12">
+      <label class="col-12 float-left">Particle:</label>
+      <input type="text" th:field="*{particle}" class="form-control col-12 float-left mt-2"
+             placeholder="Enter Particle">
+    </div>
+
+
+    <div class="form-group col-12">
+      <label class="col-12 float-left">Note:</label>
+      <input type="text" th:field="*{note}" class="form-control col-12 float-left mt-2"
+             placeholder="Enter note">
+    </div>
+
+<!--    <div class="form-group col-12">-->
+<!--      <label class="col-12 float-left">Description:</label>-->
+<!--      <input type="text" th:field="*{description}" class="form-control col-12 float-left mt-2"-->
+<!--             placeholder="Enter description">-->
+<!--    </div>-->
+<!--    <div class="form-group col-12">-->
+<!--      <label class="col-12 float-left">Example:</label>-->
+<!--      <textarea rows="4" cols="20" style="max-width:100%;" th:field="*{example}" class="form-control col-12 float-left mt-2"-->
+<!--                placeholder="Enter example">-->
+<!--          </textarea>-->
+<!--    </div>-->
+
+    <div class="col-12 " style="padding: 2% 0%">
+      <button type="submit" class="btn btn-primary float-right">Create</button>
+      <a class="btn btn-primary " href="/dictionary" role="button">Back</a>
+    </div>
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

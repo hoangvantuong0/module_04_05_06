@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Delete Word</title>
+</head>
+<body>
+<h2>Are you sure?</h2>
+<form th:action="@{/dictionary/delete}" th:object="${dictionary}" th:method="POST">
+  <input th:type="hidden" name="id" th:field="*{id}">
+  <table class="table">
+    <tr>
+      <td>Id:</td>
+      <td th:text="${dictionary.id}"></td>
+    </tr>
+    <tr>
+      <td>Word:</td>
+      <td th:text="${dictionary.word}"></td>
+    </tr>
+    <tr>
+      <td>Mean:</td>
+      <td th:text="${dictionary.mean}"></td>
+    </tr>
+    <tr>
+      <td>Sino:</td>
+      <td th:text="${dictionary.sino}"></td>
+    </tr>
+    <tr>
+      <td>
+        <button id="clickDeleteDictionary" type="submit" class="btn btn-danger clickDeleteDictionary">Delete
+        </button>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
