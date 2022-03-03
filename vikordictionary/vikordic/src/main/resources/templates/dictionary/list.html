@@ -43,6 +43,9 @@
           <th class="text-center">한자</th>
           <th class="text-center">한-월어</th>
           <th class="text-center">어의</th>
+
+          <th class="text-center">종별사</th>
+
           <th class="text-center">조사</th>
           <th class="text-center">파생어</th>
           <th class="text-center">각주</th>
@@ -60,6 +63,9 @@
             <td class="text-center" th:text="${dictionary.chinese}"></td>
             <td class="text-center" th:text="${dictionary.sino}"></td>
             <td class="text-center" th:text="${dictionary.mean}"></td>
+
+            <td class="text-center" th:text="${dictionary.partsOfSpeech.name}"></td>
+
             <td class="text-center" th:text="${dictionary.derivative}"></td>
             <td class="text-center" th:text="${dictionary.particle}"></td>
             <td class="text-center" th:text="${dictionary.note}"></td>

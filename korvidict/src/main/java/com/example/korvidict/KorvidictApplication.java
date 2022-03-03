@@ -1,0 +1,13 @@
+package com.example.korvidict;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class KorvidictApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(KorvidictApplication.class, args);
+    }
+
+}

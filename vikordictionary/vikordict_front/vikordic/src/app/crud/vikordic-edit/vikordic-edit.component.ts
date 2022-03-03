@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {DictionaryService} from "../../service/dictionary.service";
+import {PartsOfSpeech} from "../../model/parts-of-speech";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-vikordic-edit',
@@ -12,6 +14,11 @@ export class VikordicEditComponent implements OnInit {
 
   public formEdit: FormGroup;
   public dictionaryId;
+
+  partsOfSpeech: PartsOfSpeech[];
+  subscription: Subscription;
+
+
 
   constructor(
     public formBuilder: FormBuilder,
@@ -28,11 +35,17 @@ export class VikordicEditComponent implements OnInit {
       chinese: ['', [Validators.required]],
       sino: ['', [Validators.required]],
       mean: ['', [Validators.required]],
+
+      partsOfSpeech: ['',],
+
+
       derivative: ['',],
       particle: ['',],
-      note: ['', ],
+      note: ['',],
 
     });
+
+
     this.activatedRouter.params.subscribe(data => {
       this.dictionaryId = data.id;
       this.dictionaryService.getDictionaryById(this.dictionaryId).subscribe(data => {
@@ -40,11 +53,33 @@ export class VikordicEditComponent implements OnInit {
         console.log(this.formEdit);
       });
     });
+    this.getAllPart();
   }
-  editDictionaries(){
-    this.dictionaryService.editDictionary(this.formEdit.value, this.dictionaryId).subscribe(data =>{
+
+  editDictionaries() {
+    this.dictionaryService.editDictionary(this.formEdit.value, this.dictionaryId).subscribe(data => {
       this.router.navigateByUrl('dictionary');
     });
   }
 
+  getAllPart() {
+    // this.subscription = this.dictionaryService.getAllParts().subscribe(data => {
+    //     this.partsOfSpeech = data["content"];
+    //     console.log(this.partsOfSpeech);
+    //     // console.log(this.questions[2].customer_type.name);
+    //   }
+    //   , error => {
+    //     console.log(this.partsOfSpeech);
+    //   });
+
+
+    //
+
+    this.subscription = this.dictionaryService.getAllParts().subscribe(value => {
+        this.partsOfSpeech = value;
+      }, error => {
+        console.log(error);
+      }
+    );
+  }
 }

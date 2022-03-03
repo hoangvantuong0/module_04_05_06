@@ -1,4 +1,4 @@
-package com.example.vikordic.service;
+package com.example.vikordic.service.dictionary;
 
 import java.util.Optional;
 

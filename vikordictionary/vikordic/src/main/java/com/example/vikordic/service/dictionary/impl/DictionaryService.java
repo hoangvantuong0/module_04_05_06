@@ -16,6 +16,7 @@ public class DictionaryService implements IDictionaryService {
     @Autowired
     IDictionaryRepository dictionaryRepository;
 
+
     @Override
     public Page<Dictionary> findAll(Pageable pageable) {
         return dictionaryRepository.findAll(pageable);

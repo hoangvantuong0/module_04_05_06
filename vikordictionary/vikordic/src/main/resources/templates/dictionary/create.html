@@ -38,6 +38,23 @@
     </div>
 
 
+
+
+    <div class="form-group col-12">
+      <label class="col-12 float-left">Parts Of Speech:</label>
+      <select th:field="*{partsOfSpeech}" class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+        <option value="">Choose Parts Of Speech</option>
+        <th:block th:each="partsOfSpeech : ${partsOfSpeechList}">
+          <option th:value="${partsOfSpeech.id}" th:text="${partsOfSpeech.name}"></option>
+<!--          <span style="color: red" th:if="${#fields.hasErrors('partsOfSpeech')}" th:errors="*{partsOfSpeech}"></span>-->
+        </th:block>
+      </select>
+    </div>
+
+
+
+
+
     <div class="form-group col-12">
       <label class="col-12 float-left">Derivative:</label>
       <input type="text" th:field="*{derivative}" class="form-control col-12 float-left mt-2"

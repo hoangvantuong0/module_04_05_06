@@ -2,12 +2,14 @@ package com.example.vikordic.model;
 
 import javax.persistence.*;
 
-@Table
+
+@Table(name = "dictionary",uniqueConstraints = {@UniqueConstraint(columnNames = {"id"})})
+//@Table
 @Entity
 public class Dictionary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String word;
     private String chinese;
     private String sino;
@@ -16,11 +18,23 @@ public class Dictionary {
     private String particle;
     private String note;
 
+
+
+//    @ManyToOne(targetEntity = PartsOfSpeech.class)
+
+//    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+//    @ManyToOne(targetEntity = PartsOfSpeech.class, fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+//test
+//    @ManyToOne(targetEntity = PartsOfSpeech.class, fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @ManyToOne(targetEntity = PartsOfSpeech.class)
+    @JoinColumn(name = "parts_of_speech_id")
+    private PartsOfSpeech partsOfSpeech;
+
     public Dictionary() {
     }
 
-    public Dictionary(int id, String word, String chinese, String sino,
-                      String mean, String derivative, String particle, String note) {
+    public Dictionary(Integer id, String word, String chinese, String sino,
+                      String mean, String derivative, String particle, String note, PartsOfSpeech partsOfSpeech) {
         this.id = id;
         this.word = word;
         this.chinese = chinese;
@@ -29,13 +43,14 @@ public class Dictionary {
         this.derivative = derivative;
         this.particle = particle;
         this.note = note;
+        this.partsOfSpeech = partsOfSpeech;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -93,5 +108,13 @@ public class Dictionary {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public PartsOfSpeech getPartsOfSpeech() {
+        return partsOfSpeech;
+    }
+
+    public void setPartsOfSpeech(PartsOfSpeech partsOfSpeech) {
+        this.partsOfSpeech = partsOfSpeech;
     }
 }

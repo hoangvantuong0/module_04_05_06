@@ -1,0 +1,96 @@
+<h3 class="text-center">Thêm Mới</h3>
+
+<!--<form class="w-75 mx-auto mt-3" [formGroup]="formAdd" (ngSubmit)="onSubmit()">-->
+<form class="w-75 mx-auto mt-3" [formGroup]="formAdd">
+  <div class="form-group">
+    <p>Từ</p>
+    <input class="form-control" type="text" formControlName="word">
+    <p *ngIf="formAdd.controls.word.errors?.required && formAdd.controls.word.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+  <div class="form-group">
+    <p>Gốc Hán</p>
+    <input class="form-control" type="text" formControlName="chinese">
+    <p *ngIf="formAdd.controls.chinese.errors?.required && formAdd.controls.chinese.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+
+  <div class="form-group">
+    <p>Hán Hàn</p>
+    <input class="form-control" type="text" formControlName="sino">
+    <p *ngIf="formAdd.controls.sino.errors?.required && formAdd.controls.sino.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+
+  <div class="form-group">
+    <p>Nghĩa</p>
+    <input class="form-control" type="text" formControlName="mean">
+    <p *ngIf="formAdd.controls.mean.errors?.required && formAdd.controls.mean.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>
+  </div>
+
+
+
+
+  <div class=" mb-3">
+    <label class="form-label">Từ Loại</label>
+    <select class="form-select form-select-md mb-3" name="partsOfSpeech" id="partsOfSpeech" formControlName="partsOfSpeech"
+            ng aria-label=".form-select-lg example">
+      <!--      <select class="form-select form-select-md mb-3" formControlName="partsOfSpeech"-->
+      <!--              ng aria-label=".form-select-lg example">-->
+      <option>Chọn loại từ</option>
+      <option *ngFor="let item of partsOfSpeech"
+              [ngValue]="item">{{item.name}}</option>
+
+    </select>
+
+    <!--    <div class=" mb-3">-->
+    <!--      <label class="form-label">Parts Of Speech</label>-->
+    <!--      <select class="form-select" name="partsOfSpeech" id="partsOfSpeech" formControlName="partsOfSpeech">-->
+    <!--        <option *ngFor="let item of partsOfSpeech" [ngValue]="item">{{item.name}}</option>-->
+    <!--      </select>-->
+    <!--      <small *ngIf="employeeForm.get('employeeDegree').touched && employeeForm.get('employeeDegree').errors?.required"-->
+    <!--             class="text-warning fst-italic">Please fill out this field!</small>-->
+    <!--    </div>-->
+
+
+    <!--    <span style="color: red"-->
+    <!--          *ngIf="question_type.hasError('required') && (question_type.dirty ||question_type.touched)">-->
+    <!--              Question type is not empty </span>-->
+  </div>
+
+
+
+
+  <div class="form-group">
+    <p>Từ Phái Sinh</p>
+    <input class="form-control" type="text" formControlName="derivative">
+    <!--    <p *ngIf="formAdd.controls.derivative.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>-->
+  </div>
+
+  <div class="form-group">
+    <p>Tiểu Từ</p>
+    <input class="form-control" type="text" formControlName="particle">
+    <!--    <p *ngIf="formAdd.controls.particle.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>-->
+  </div>
+
+
+  <div class="form-group">
+    <p>Chú Thích</p>
+    <input class="form-control" type="text" formControlName="note">
+    <!--    <p *ngIf="formAdd.controls.note.touched" class="text-danger">Nhập sai! Vui lòng nhập lại!</p>-->
+  </div>
+
+  <!--  <div class="form-group">-->
+  <!--    <p>Example</p>-->
+  <!--    <input class="form-control" type="text" formControlName="example">-->
+
+  <!--    <p *ngIf="formAdd.controls.example.errors?.required && formAdd.controls.example.touched"-->
+  <!--       class="text-danger">Nhập sai! Vui lòng nhập lại!</p>-->
+  <!--  </div>-->
+
+</form>
+<div class="row d-flex justify-content-center mt-4">
+  <div style="width: 35px">
+    <button [disabled]="formAdd.invalid" class="btn btn-success" (click)="addNewDictionaries()">Thêm Mới</button>
+  </div>
+</div>

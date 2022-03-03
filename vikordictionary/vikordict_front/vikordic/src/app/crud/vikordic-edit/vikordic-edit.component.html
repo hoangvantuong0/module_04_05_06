@@ -37,6 +37,21 @@
   </div>
 
 
+  <div class=" mb-3">
+    <label class="form-label">Từ Loại</label>
+        <select class="form-select form-select-md mb-3" name="partsOfSpeech" id="partsOfSpeech" formControlName="partsOfSpeech"
+                ng aria-label=".form-select-lg example">
+<!--    <select class="form-select form-select-md mb-3" formControlName="parts"-->
+<!--            ng aria-label=".form-select-lg example">-->
+      <option>Chọn loại từ</option>
+      <option *ngFor="let item of partsOfSpeech"
+              [ngValue]="item">{{item.name}}</option>
+
+    </select>
+
+  </div>
+
+
   <div class="form-group">
     <p>Từ Phái Sinh</p>
     <input class="form-control" type="text" formControlName="derivative">
