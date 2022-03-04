@@ -75,7 +75,6 @@ public class DictionaryController {
     }
 
 
-
     @GetMapping("/{id}")
     public ResponseEntity<Dictionary> findDictionaryById(@PathVariable Integer id) {
         Optional<Dictionary> dictionary = dictionaryService.findById(id);
@@ -96,8 +95,7 @@ public class DictionaryController {
         return new ResponseEntity<>(dictionaryOptional.get(), HttpStatus.NO_CONTENT);
     }
 
-
-
+    
     @PostMapping(value = "/create")
     public ResponseEntity<Object> saveDictionary(@RequestBody Dictionary dictionary, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
