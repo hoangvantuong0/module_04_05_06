@@ -1,10 +1,10 @@
-package com.example.vikordic.controller;
+package com.example.tudien.controller;
 
 
-import com.example.vikordic.model.Dictionary;
-import com.example.vikordic.model.PartsOfSpeech;
-import com.example.vikordic.service.dictionary.IDictionaryService;
-import com.example.vikordic.service.dictionary.IPartsOfSpeechService;
+import com.example.tudien.model.Dictionary;
+import com.example.tudien.model.PartsOf;
+import com.example.tudien.service.IDictionaryService;
+import com.example.tudien.service.IPartsOfService;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -24,33 +24,32 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-
 //@Controller
 //@RequestMapping("/dictionary")
+
+
+
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/dictionary")
 
+
 public class DictionaryController {
 
-    // webservice
-
-
-//    private List<PartsOfSpeech> partsOfSpeechList = new ArrayList<PartsOfSpeech>();
     @Autowired
-    private IPartsOfSpeechService partsOfSpeechService;
+    private IPartsOfService partsOfService;
 
 
-//    private List<Dictionary> dictionaryList = new ArrayList<Dictionary>();
+    //    private List<Dictionary> dictionaryList = new ArrayList<Dictionary>();
     @Autowired
     private IDictionaryService dictionaryService;
 
 
 
     @GetMapping("/parts/list")
-    public ResponseEntity< Iterable< PartsOfSpeech > > getAllParts() {
-        List< PartsOfSpeech > partsOfSpeechPage = (List< PartsOfSpeech >) partsOfSpeechService.findAll();
+    public ResponseEntity< Iterable< PartsOf > > getAllParts() {
+        List< PartsOf > partsOfSpeechPage = (List< PartsOf >) partsOfService.findAll();
         if (partsOfSpeechPage.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
@@ -109,19 +108,21 @@ public class DictionaryController {
 
     public ResponseEntity<Dictionary> update(@RequestBody Dictionary dictionary,@PathVariable Integer id) {
         try{
-        dictionaryService.save(dictionary);
+            dictionaryService.save(dictionary);
 
-        return new ResponseEntity<>(dictionary, HttpStatus.OK);
-    } catch (BeansException e) {
-        e.printStackTrace();
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(dictionary, HttpStatus.OK);
+        } catch (BeansException e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+
     }
 
 
-    }
 
 
-// webservice
+
 
 //
 //private List<Dictionary> dictionaryList = new ArrayList<Dictionary>();
@@ -130,12 +131,12 @@ public class DictionaryController {
 //
 //
 //    @Autowired
-//    private IPartsOfSpeechService partsOfSpeechService;
+//    private IPartsOfService partsOfService;
 //
 //
 //    @ModelAttribute("partsOfSpeechList")
-//    public Iterable<PartsOfSpeech> partsOfSpeechList(Model model) {
-//        return  partsOfSpeechService.findAll();
+//    public Iterable<PartsOf> partsOfSpeechList(Model model) {
+//        return  partsOfService.findAll();
 //    }
 //
 //
@@ -194,7 +195,7 @@ public class DictionaryController {
 //    public String edit(@ModelAttribute("dictionary") Dictionary dictionary,
 //                       Model model, RedirectAttributes redirectAttributes) {
 //        dictionaryService.save(dictionary);
-//        redirectAttributes.addFlashAttribute("message", "Edit word successfully");
+//        redirectAttributes.addFlashAttribute("message", "Edit word successfully!");
 //        return "redirect:/dictionary";
 //    }
 //
@@ -213,17 +214,4 @@ public class DictionaryController {
 //        return "redirect:/dictionary";
 //    }
 
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
