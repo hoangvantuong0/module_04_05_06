@@ -15,8 +15,9 @@ public interface IDictionary extends JpaRepository<Dictionary, Integer> {
     @Override
     Page<Dictionary> findAll(Pageable pageable);
     // Search by name
-    @Query(value = "SELECT * FROM vikordic.dictionary vd" +
-            " where vd.word like concat('%',trim(:word), '%') or vd.mean like concat('%',trim(:word), '%') " +
-            "or vd.sino like concat('%',trim(:word), '%')", nativeQuery = true)
+    @Query(value = "SELECT * FROM tudien.dictionary td" +
+            " where td.word like concat('%',trim(:word), '%') or td.mean like concat('%',trim(:word), '%') "
+//            + "or td.sino like concat('%',trim(:word), '%')"
+            , nativeQuery = true)
     Page< Dictionary > searchByWord(@Param("word") String name, Pageable pageable);
 }

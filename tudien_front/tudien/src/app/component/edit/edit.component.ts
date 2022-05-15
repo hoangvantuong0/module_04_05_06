@@ -32,16 +32,12 @@ export class EditComponent implements OnInit {
     this.formEdit = this.formBuilder.group({
       id: [''],
       word: ['', [Validators.required]],
-      chinese: ['', [Validators.required]],
-      sino: ['', [Validators.required]],
+
       mean: ['', [Validators.required]],
 
-      partsOfSpeech: ['',],
+      partsOf: ['',],
 
-
-      derivative: ['',],
-      particle: ['',],
-      note: ['',],
+      example: ['',],
 
     });
 
